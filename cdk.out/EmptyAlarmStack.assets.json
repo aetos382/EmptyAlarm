@@ -1,0 +1,62 @@
+{
+  "version": "31.0.0",
+  "files": {
+    "dd70c9291f90686877dd7eb18ea62ac7d87af05bff8571f92ef962cc9026fa2c": {
+      "source": {
+        "path": "asset.dd70c9291f90686877dd7eb18ea62ac7d87af05bff8571f92ef962cc9026fa2c.lambda",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-ap-northeast-1",
+          "objectKey": "dd70c9291f90686877dd7eb18ea62ac7d87af05bff8571f92ef962cc9026fa2c.zip",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-ap-northeast-1"
+        }
+      }
+    },
+    "65cf9f712727efa44fdfcabd0c3af10a91fab1a4cc79fa5408f9226165d29ec8": {
+      "source": {
+        "path": "asset.65cf9f712727efa44fdfcabd0c3af10a91fab1a4cc79fa5408f9226165d29ec8.lambda",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-ap-northeast-1",
+          "objectKey": "65cf9f712727efa44fdfcabd0c3af10a91fab1a4cc79fa5408f9226165d29ec8.zip",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-ap-northeast-1"
+        }
+      }
+    },
+    "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189": {
+      "source": {
+        "path": "asset.e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-ap-northeast-1",
+          "objectKey": "e8fea7e029780f03a78580d41b7ffbc4551d6e7d6caa190a451880191c166189.zip",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-ap-northeast-1"
+        }
+      }
+    },
+    "da89d1062088b87ec23b1071ad827d9689bda8a0cbea3804b6b3680e941c5bf2": {
+      "source": {
+        "path": "EmptyAlarmStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-ap-northeast-1",
+          "objectKey": "da89d1062088b87ec23b1071ad827d9689bda8a0cbea3804b6b3680e941c5bf2.json",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-ap-northeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

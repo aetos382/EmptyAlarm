@@ -1,0 +1,442 @@
+{
+  "version": "31.0.0",
+  "artifacts": {
+    "EmptyAlarmStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "EmptyAlarmStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "EmptyAlarmStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/ap-northeast-1",
+      "properties": {
+        "templateFile": "EmptyAlarmStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-ap-northeast-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-ap-northeast-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-ap-northeast-1/da89d1062088b87ec23b1071ad827d9689bda8a0cbea3804b6b3680e941c5bf2.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "EmptyAlarmStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-ap-northeast-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "EmptyAlarmStack.assets"
+      ],
+      "metadata": {
+        "/EmptyAlarmStack/TaskDefinition/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefinitionTaskRoleFD40A61D"
+          }
+        ],
+        "/EmptyAlarmStack/TaskDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TaskDefinitionB36D86D9"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBE9A1ADBC"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBSecurityGroupF7435A5C"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/SecurityGroup/to EmptyAlarmStackServiceSecurityGroupA8BF4463:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBSecurityGrouptoEmptyAlarmStackServiceSecurityGroupA8BF44638087BBFED3"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBPublicListener46709EAA"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBPublicListenerECSGroup0CC8688C"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LB/TestListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLBTestListener2C56778B"
+          }
+        ],
+        "/EmptyAlarmStack/Service/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceLoadBalancerDNSEC5B149E"
+          }
+        ],
+        "/EmptyAlarmStack/Service/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceServiceURL250C0FB6"
+          }
+        ],
+        "/EmptyAlarmStack/Service/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Service9571FDD8"
+          }
+        ],
+        "/EmptyAlarmStack/Service/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceSecurityGroupEEA09B68"
+          }
+        ],
+        "/EmptyAlarmStack/Service/Service/SecurityGroup/from EmptyAlarmStackServiceLBSecurityGroup4D825080:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceSecurityGroupfromEmptyAlarmStackServiceLBSecurityGroup4D82508080ADA64658"
+          }
+        ],
+        "/EmptyAlarmStack/Service/AccessLogBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceAccessLogBucket010FE97D"
+          }
+        ],
+        "/EmptyAlarmStack/Service/AccessLogBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceAccessLogBucketPolicyAB330285"
+          }
+        ],
+        "/EmptyAlarmStack/Service/HealthAlarm/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceHealthAlarmDAB0EF53"
+          }
+        ],
+        "/EmptyAlarmStack/Service/GreenTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceGreenTargetGroup3BE32266"
+          }
+        ],
+        "/EmptyAlarmStack/Service/Application/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceApplication92776FC3"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupServiceRole2FF13484"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupE338BE38"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderOnEventLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderOnEventLambdaServiceRole6EA4E767"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderOnEventLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderOnEventLambdaServiceRoleDefaultPolicy296530EF"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderOnEventLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderOnEventLambda9ABD290E"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderIsCompleteLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderIsCompleteLambdaServiceRoleC7357CFE"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderIsCompleteLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderIsCompleteLambdaServiceRoleDefaultPolicyF7D789DF"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProviderIsCompleteLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderIsCompleteLambdaAA2C6C46"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonEventServiceRole4597B89C"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonEventServiceRoleDefaultPolicy3F6F0E3A"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonEventA7C01DF8"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkisCompleteServiceRole36179A24"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkisCompleteServiceRoleDefaultPolicyF9DF1759"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkisComplete977D7B6B"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonTimeoutServiceRole92068547"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonTimeoutServiceRoleDefaultPolicy75BA4D34"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderframeworkonTimeout3A61165E"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderwaiterstatemachineRole2BAD3662"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderwaiterstatemachineRoleDefaultPolicy02262A92"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/DeploymentProvider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentDeploymentProviderwaiterstatemachineB08D257A"
+          }
+        ],
+        "/EmptyAlarmStack/Service/DeploymentGroup/Deployment/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceDeploymentGroupDeploymentCB57B224"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYN926A5246"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpc7788A521"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1Subnet3C273B99"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1RouteTableA1FD6ACC"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1RouteTableAssociation8B583A17"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1DefaultRouteFF4E2178"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1EIP8704DB2F"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet1NATGateway5E3732C1"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2Subnet95FF715A"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2RouteTable263DEAA5"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2RouteTableAssociation43E5803C"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2DefaultRouteB1375520"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2EIPF0764873"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPublicSubnet2NATGateway4C855E00"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet1Subnet075EFF4C"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet1RouteTable4F1D2E36"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet1RouteTableAssociation34B92275"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet1DefaultRouteA5ADF694"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet2SubnetE4CEDF73"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet2RouteTableDCE46591"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet2RouteTableAssociation111C622F"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcPrivateSubnet2DefaultRoute20CE2D89"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcIGW9C2C2B8F"
+          }
+        ],
+        "/EmptyAlarmStack/EcsDefaultClusterMnL3mNNYN/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EcsDefaultClusterMnL3mNNYNVpcVPCGW2447264E"
+          }
+        ],
+        "/EmptyAlarmStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/EmptyAlarmStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/EmptyAlarmStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "EmptyAlarmStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

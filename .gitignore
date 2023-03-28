@@ -1,0 +1,11 @@
+.vs/
+bin/
+obj/
+node_modules/
+
+*.user
+*.log
+*.binlog
+
+.cdk.staging
+# cdk.out
